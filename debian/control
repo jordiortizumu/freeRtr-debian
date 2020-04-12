@@ -5,6 +5,8 @@ Build-Depends: debhelper (>= 9.20160709~),
                dpkg-dev (>= 1.16.1.1~),
 	       libpcap-dev,
 	       default-jdk,
+	       default-jre-headless,
+# default-jdk,
 	       javahelper,
 	       dh-sysuser
 Maintainer: Jean-Rémy Buchs <jrb0001@692b8c32.de>

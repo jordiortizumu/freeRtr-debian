@@ -7,6 +7,7 @@ set -e
 adduser freerouter dialout
 mkdir -p /etc/freerouter/interfaces
 chown freerouter:freerouter /etc/freerouter
-chown root:root /etc/freerouter/interfaces
+chown -R root:root /etc/freerouter/interfaces
+mv /etc/freerouter/interfaces/interface.cpu_port /etc/freerouter/interfaces/cpu_port
 chmod 770 /etc/freerouter
 

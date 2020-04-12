@@ -12,14 +12,14 @@ WorkingDirectory=/var/lib/freerouter
 User=freerouter
 Group=freerouter
 NoNewPrivileges=true
-ProtectSystem=strict
+#ProtectSystem=strict
 ProtectHome=true
 ReadWritePaths=/var/lib/freerouter /etc/freerouter
 PrivateTmp=true
 PrivateDevices=true
 # PrivateNetwork is not possible because the hardware access processes have to be in the this and the main namespace at the same time.
 PrivateNetwork=false
-PrivateUsers=true
+#PrivateUsers=true
 ProtectKernelTunables=true
 ProtectKernelModules=true
 ProtectControlGroups=true
