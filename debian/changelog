@@ -1,3 +1,9 @@
+freerouter (nightly) unstable; urgency=medium
+
+  * Switched to nightly versioning 
+
+ -- Frederic LOUI <fl@mp.ls>  Sun, 12 Apr 2020 20:53:01 +0000
+
 freerouter (20.4.8) unstable; urgency=medium
 
   * Initial version
