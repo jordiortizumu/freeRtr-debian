@@ -33,7 +33,7 @@ Description: free, open source router os process
 Package: freerouter-native
 Architecture: amd64
 Pre-Depends: adduser
-Depends: ${misc:Depends}, ${shlibs:Depends}, libpcap-dev,libpcap,dpdk,dpdk-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}, libpcap-dev,dpdk,dpdk-dev
 Description: Native tools for better performance than socat.
  These tools are completely optional but should deliver better performance
  than socat.
