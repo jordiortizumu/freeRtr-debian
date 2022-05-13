@@ -6,7 +6,7 @@ Before=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/freerouter router /etc/freerouter/rtr-
+ExecStart=java -cp /usr/share/java/freerouter.jar net.freertr.router routers /etc/freerouter/rtr-hw.txt /etc/freerouter/rtr-sw.txt
 Restart=always
 WorkingDirectory=/var/lib/freerouter
 User=freerouter
