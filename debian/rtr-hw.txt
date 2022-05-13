@@ -1,10 +1,13 @@
-hwid emu
-port 63000 64000
-int eth0 eth 0000.0A00.0040 127.0.0.1 22710 127.0.0.1 22709
-!int eth1 eth 0000.0A00.02FE 127.0.0.1 22712 127.0.0.1 22711
-!line tty1 127.0.0.1 21003 127.0.0.1 21003
-tcp2vrf 2323 v1 23
-tcp2vrf 2001 v1 22
+hwid XXX
+! cpu_port
+int eth0 eth - 127.0.0.1 20001 127.0.0.1 20002
+! freerouter control port for message
 tcp2vrf 9080 v1 9080
-!tcp2vrf 8080 v1 80
-def alias test bash command attach shell1 socat - exec:sh,ctty,pty,stderr
+! freerouter cli
+tcp2vrf 2323 v1 23
+! launch a process called "veth0" that actually link to veth0b
+! cmd: ip link add veth0a type veth peer name veth0b
+! cmd: ip link set dev veth0a up
+! cmd: ip link set dev veth0b up
+proc veth0 /usr/bin/pcapInt.bin veth0a 20002 127.0.0.1 20001 127.0.0.1
+!proc p4emu /usr/bin/p4dpdk.bin --vdev=net_af_packet0,iface=veth0b 127.0.0.1 9080 1
